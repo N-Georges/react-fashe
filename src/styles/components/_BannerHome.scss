@@ -1,0 +1,41 @@
+
+
+.banner{
+    background: rgba(0, 0, 0, .65) url('../../assets/clothes-retail.jpg');
+    background-blend-mode: darken;
+    // background-image: url('../../assets/clothes-retail.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background: linear-gradient();
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .banner-content{
+        text-align: center; 
+        h1{
+            color: #fff;
+            letter-spacing: 3px;
+            font-weight: bold;
+            font-size: 70px;
+
+        }
+        p{
+            color: #fff;
+            font-size: 12px;
+
+        }
+        hr{
+            height: 4px;
+            color: #fff;
+            margin-top: 0;
+        }
+        button{
+            border: none;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 15px;
+        }
+    }
+}
