@@ -1,0 +1,25 @@
+.cards{
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: center;
+    position: relative;
+}
+.cardFirst{
+    background-image: url(../../assets/PIERCE-TIGER-WOOD-FRONT.jpg);
+
+}
+.cardTwo{
+    background-image: url(../../assets/gshock.jpg);
+}
+.cardThree{
+    background-image: url(../../assets/bagpack.jpg);
+}
+
+.coming-soon{
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+    opacity: 0.6;
+}

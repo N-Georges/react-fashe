@@ -11,9 +11,10 @@ import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlin
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 import { grey } from '@mui/material/colors';
 import { useNavigate } from 'react-router-dom';
+
+
+
 const colorNav =  grey[800]
-
-
 
 const Header = () => {
     const navigate = useNavigate()

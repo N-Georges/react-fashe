@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
+import BannerGlobal from '../components/Banner/BannerGlobal';
+
 
 const ProductPage = () => {
+    // eslint-disable-next-line
+    const [namePage, setNamePage] = useState('Product')
+    // eslint-disable-next-line
+    const [subTitle, setSubTitle] = useState('New Arrivals Women Collection')
     return (
         <div>
-            product
+            <BannerGlobal
+                namePage={namePage}
+                subTitle={subTitle}
+            />
         </div>
     );
 };
