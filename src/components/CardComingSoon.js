@@ -14,8 +14,8 @@ const CardComingSoon = () => {
                     mt:2,
                     '& > :not(style)': {
                         m: 1,
-                        width: 238,
-                        height: 248,
+                        width: 258,
+                        height: 278,
                     },
                 }}
             >

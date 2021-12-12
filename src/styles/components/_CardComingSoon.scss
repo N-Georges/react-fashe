@@ -1,6 +1,6 @@
 .cards{
     background-repeat: no-repeat;
-    background-size: 110%;
+    background-size: cover;
     background-position: center;
     position: relative;
 }
@@ -17,7 +17,7 @@
 
 .coming-soon{
     position: absolute;
-    top: 200px;
+    top: 225px;
     left: 50%;
     transform: translateX(-50%);
     color: black;

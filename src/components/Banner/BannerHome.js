@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const BannerHome = () => {
     return (
         <div className='banner'>
@@ -10,6 +11,7 @@ const BannerHome = () => {
                 <button>SHOP NOW</button>
             </div>
         </div>
+        
     );
 };
 
