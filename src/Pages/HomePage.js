@@ -4,18 +4,18 @@ import BannerHome from '../components/Banner/BannerHome';
 import CardComingSoon from '../components/CardComingSoon';
 import CardProductHome from '../components/CardProductHome';
 import ProductCardHome from '../components/ProductCardHome';
-import BackgroundImage from '../assets/vetements_image_003.jpg';
+import BannerVideoHome from '../components/BannerVideoHome';
 
 const HomePage = () => {
     // eslint-disable-next-line
     const [bestSeller, setBestSeller] = useState([
         {
-            picture: `url(${BackgroundImage})`,
+            picture: '../assets/gshock.jpg',
             subTitle:'Herschel supply co 25l',
             price: 75.00
         },
         {
-            // picture:{backgroundImage:`url(../assets/young-man-wearing-black-t-shirt.jpg)`},
+            picture:{backgroundImage:`url(${"../assets/young-man-wearing-black-t-shirt.jpg"})`},
             subTitle:'Denim jacket blue',
             price: 92.50
         },
@@ -35,14 +35,14 @@ const HomePage = () => {
             <BannerHome/>
             <CardComingSoon/>
             <ProductCardHome/>
-            <Box sx={{ display: 'flex', justifyContent:'center', flexWrap: 'wrap', mt:2,
+            <Box sx={{ display: 'flex', justifyContent:'center', flexWrap: 'wrap',
                     '& > :not(style)': {
                         m: 1,
                         width: 193,
-                        height: 278,
+                        height: 228,
+                        marginBottom: 20 
                     }
             }}>
-
             {bestSeller.map((item, index) => {
                 return (
                     <CardProductHome
@@ -54,6 +54,7 @@ const HomePage = () => {
                 )
             })}
             </Box>
+            <BannerVideoHome/>
         </div>
     );
 };

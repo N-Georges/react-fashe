@@ -1,0 +1,44 @@
+.banner-video{
+    background: rgba(0, 0, 0, .45) url('../../assets/row-of-fashionable-clothing-on-hangers.jpg');
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .banner-video-content{
+        text-align: center; 
+        h1{
+            color: #fff;
+            letter-spacing: 3px;
+            font-weight: bold;
+            font-size: 50px;
+        }
+        p{
+            color: #fff;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 0;
+            &:nth-child(3){
+                font-size: 12px;
+                font-weight: normal;
+            }
+        }
+        hr{ 
+            height: 4px;
+            color: #fff;
+            margin-top: 0;
+        }
+        .play{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p{
+                font-size: 12px;
+                font-weight: normal;
+            }
+        }
+    }
+}

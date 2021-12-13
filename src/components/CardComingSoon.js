@@ -11,7 +11,7 @@ const CardComingSoon = () => {
                     display: 'flex',
                     justifyContent:'center',
                     flexWrap: 'wrap',
-                    mt:2,
+                    mt:5,
                     '& > :not(style)': {
                         m: 1,
                         width: 258,
