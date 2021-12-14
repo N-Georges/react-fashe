@@ -6,6 +6,9 @@ import HomePage from './Pages/HomePage';
 import ProductPage from './Pages/ProductPage';
 import Header from './components/Header'
 import Footer from './components/Footer';
+import LikePage from './Pages/LikePage';
+import PanierPage from './Pages/PanierPage';
+import ProductDetail from './Pages/ProductDetail';
 
 function App() {
   return (
@@ -17,6 +20,9 @@ function App() {
           <Route path='/product' element={<ProductPage/>}/>
           <Route path='/about' element={<AboutPage/>}/>
           <Route path='/contact' element={<ContactPage/>}/>
+          <Route path='/like' element={<LikePage/>}/>
+          <Route path='/panier' element={<PanierPage/>}/>
+          <Route path='/product/:id' element={<ProductDetail/>}/>
         </Routes>
         <Footer/>
       </BrowserRouter>

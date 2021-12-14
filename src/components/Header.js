@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -18,13 +18,15 @@ const colorNav =  grey[800]
 
 const Header = () => {
     const navigate = useNavigate()
+    // eslint-disable-next-line
+    const [notifCart, setNotifCart] = useState(1)
     return (
         <div>
             <Box sx={{ flexGrow: 1}}>
                 <AppBar position="static" sx={{pt:2}} style={{ background: '#fff' }}>
                     <Toolbar mt={5}>
                         <Typography
-                            onClick={() => {navigate("/")}}
+                            onClick={() => {navigate("/") }}
                             className='navlogo'
                             color='common.black'
                             variant="h6"
@@ -81,14 +83,14 @@ const Header = () => {
                         </Container>
                         <Box sx={{ flexGrow: 1 }} />
                         <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                            <IconButton size="large" aria-label="show 4 new mails" >
+                            <IconButton onClick={() => {navigate("/like")}} size="large" aria-label="show 4 new mails" >
                                     <FavoriteBorderOutlinedIcon />
                             </IconButton>
-                            <IconButton
+                            <IconButton onClick={() => {navigate("/panier")}}
                                 size="large"
                                 aria-label="show 17 new notifications"
                             >
-                                <Badge badgeContent={1} color="error">
+                                <Badge badgeContent={notifCart} color="error">
                                     <ShoppingBagOutlinedIcon />
                                 </Badge>
                             </IconButton>

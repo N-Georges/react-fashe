@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
-import About from '../components/About';
 import BannerGlobal from '../components/Banner/BannerGlobal';
+import Like from '../components/Like';
 
-const AboutPage = () => {
+const LikePage = () => {
     // eslint-disable-next-line
-    const [namePage, setNamePage] = useState('About')
+    const [namePage, setNamePage] = useState('COUP DE COEUR')
     return (
         <div>
             <BannerGlobal
-                namePage={namePage}
+                namePage={namePage} 
+            
             />
-            <About/>
+            <Like/>
         </div>
     );
 };
 
-export default AboutPage;
+export default LikePage;

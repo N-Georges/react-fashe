@@ -4,7 +4,9 @@ import { Button, Card, IconButton } from '@mui/material';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 
 
-const CardProductHome = ({picture, subTitle, price, tag, onBuyArticle, onDetailArticle}) => {
+
+
+const Product = ({picture, subTitle, price, tag, onBuyArticle}) => {
     const [likeCard, setLikeCard] = useState('none')
     const [btnCard, setBtnCard] = useState('none')
     const [tagCard, setTagCard] = useState('none')
@@ -15,7 +17,7 @@ const CardProductHome = ({picture, subTitle, price, tag, onBuyArticle, onDetailA
         setTagCard()
     }
     return (
-        <>  
+        <div>
             <Box 
                 sx={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap', mt: 2,
                     '& > :not(style)': {
@@ -29,7 +31,6 @@ const CardProductHome = ({picture, subTitle, price, tag, onBuyArticle, onDetailA
                     style={{backgroundImage: `url(${picture})`}}
                     onMouseEnter={() => showLikeCardHover()}
                     // onMouseOver={()=> hiddenLikeCardHover()}
-                    onClick={onDetailArticle}
                 >
                     {/* <Box className='btn-card-product'> */}
                         <Button sx={{display:tagCard, opacity:'0.8', height:'10px', width:'20px', fontSize:'10px', borderRadius:'50px', m:'12px', ml:'5px', p:'10px'}} variant="contained">{tag}</Button>
@@ -46,8 +47,8 @@ const CardProductHome = ({picture, subTitle, price, tag, onBuyArticle, onDetailA
                     <span>${price}</span>
                 </div>
             </Box>
-        </>
+        </div>
     );
 };
 
-export default CardProductHome;
+export default Product;

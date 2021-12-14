@@ -3,12 +3,13 @@ import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 // eslint-disable-next-line
 import CardProductHome from './CardProductHome';
-
+import Data from '../Data'
+import { Typography } from '@mui/material';
 
 const preventDefault = (event) => event.preventDefault();
 
 
-const ProductCardHome = () => {
+const ProductCardHome = ({handleOnClick, e}) => {
     return (
         <div >
             <div className='productHome'>
@@ -21,19 +22,12 @@ const ProductCardHome = () => {
                         },
                     }}
                     onClick={preventDefault}
-                >
-                    <Link className='links' href="#" underline="hover" color='black' >
-                        {'Best Seller'}
-                    </Link>
-                    <Link className='links' href="#" underline="hover" color='black' >
-                        {'New'}
-                    </Link>
-                    <Link className='links' href="#" underline="hover" color='black' >
-                        {'Sale'}
-                    </Link>
-                    <Link className='links' href="#" underline="hover" color='black' >
-                        {'Old'}
-                    </Link>
+                    >
+                    <button value='bestSeller' onClick={(e) => handleOnClick(e)}>BestSeller</button>
+                    <button value='new' onClick={ handleOnClick}>New</button>
+                    <button value='sale' onClick={ handleOnClick}>Sale</button>
+                    <button value='old' onClick={ handleOnClick}>Old</button>
+                    
                 </Box>
 
             </div>
