@@ -1,10 +1,8 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
 // eslint-disable-next-line
 import CardProductHome from './CardProductHome';
-import Data from '../Data'
-import { Typography } from '@mui/material';
+// import Data from '../Data'
 
 const preventDefault = (event) => event.preventDefault();
 

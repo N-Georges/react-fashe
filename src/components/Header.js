@@ -82,7 +82,7 @@ const Header = () => {
                             </Typography>
                         </Container>
                         <Box sx={{ flexGrow: 1 }} />
-                        <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+                        <Box sx={{ display: { xs: 'flex', md: 'flex' } }}>
                             <IconButton onClick={() => {navigate("/like")}} size="large" aria-label="show 4 new mails" >
                                     <FavoriteBorderOutlinedIcon />
                             </IconButton>
@@ -96,12 +96,12 @@ const Header = () => {
                             </IconButton>
                             {/*  */}
                         </Box>
-                        <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+                        <Box sx={{ display: { xs: 'none', md: 'none'} }}>
                             <IconButton
                                 size="large"
                                 aria-label="show more"
                                 aria-haspopup="true"
-                                color="inherit"
+                                color="primary"
                             >
                                 <MoreIcon />
                             </IconButton>

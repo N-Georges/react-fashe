@@ -6,6 +6,10 @@ import InputAdornment from '@mui/material/InputAdornment';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import { Button } from '@mui/material';
 const Contact = () => {
+
+    const envoie = () =>{
+        alert('Votre message a bien été envoyé !')
+    }
     return (
         <div>
             <Box sx={{ width: '100%', my:5 }}>
@@ -32,7 +36,7 @@ const Contact = () => {
                             />
                             <TextField id="outlined-basic" label="Message" variant="outlined" size='normal' sx={{mb:2}}/>
                             <div className=''btn-contac>
-                            <Button variant="contained" sx={{width:'60px', px:7}}>Envoyez</Button>
+                            <Button onClick={() => envoie()} variant="contained" sx={{width:'60px', px:7}}>Envoyez</Button>
                             </div>
                         </div>
                     </Grid>

@@ -8,7 +8,8 @@ import Header from './components/Header'
 import Footer from './components/Footer';
 import LikePage from './Pages/LikePage';
 import PanierPage from './Pages/PanierPage';
-import ProductDetail from './Pages/ProductDetail';
+import Data from './Data';
+import ProductDetailPage from './Pages/ProductDetailPage';
 
 function App() {
   return (
@@ -16,13 +17,13 @@ function App() {
       <BrowserRouter>
       <Header/>
         <Routes>
-          <Route path='/' element={<HomePage/>}/>
-          <Route path='/product' element={<ProductPage/>}/>
-          <Route path='/about' element={<AboutPage/>}/>
-          <Route path='/contact' element={<ContactPage/>}/>
-          <Route path='/like' element={<LikePage/>}/>
-          <Route path='/panier' element={<PanierPage/>}/>
-          <Route path='/product/:id' element={<ProductDetail/>}/>
+          <Route path='/' element={<HomePage data={Data}/>}/>
+          <Route path='/product' element={<ProductPage data={Data}/>}/>
+          <Route path='/about' element={<AboutPage data={Data}/>}/>
+          <Route path='/contact' element={<ContactPage data={Data}/>}/>
+          <Route path='/like' element={<LikePage data={Data}/>}/>
+          <Route path='/panier' element={<PanierPage data={Data}/>}/>
+          <Route path='/product/:id' element={<ProductDetailPage data={Data} />}/>
         </Routes>
         <Footer/>
       </BrowserRouter>

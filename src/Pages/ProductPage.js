@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import BannerGlobal from '../components/Banner/BannerGlobal';
+// eslint-disable-next-line
 import Product from '../components/Product';
 import Data from  '../Data'
 import Box from '@mui/material/Box';
@@ -7,6 +8,8 @@ import { Container, Grid, InputAdornment, TextField, Typography } from '@mui/mat
 import { grey } from '@mui/material/colors'; 
 // import filterProduct from '../components/filterProduct';
 import SearchIcon from '@mui/icons-material/Search';
+import { useNavigate } from 'react-router-dom';
+import CardProductHome from '../components/CardProductHome';
 const colorNav =  grey[600] 
 
 
@@ -15,10 +18,17 @@ const colorNav =  grey[600]
 
 
 const ProductPage = () => {
+    const DetailArticle =(e) => {
+        navigate(`/product/${e.subTitle}`)
+    }
+    console.log(DetailArticle);
     // eslint-disable-next-line
     const [namePage, setNamePage] = useState('Product')
     // eslint-disable-next-line
     const [name, setName] = useState('New Arrivals Women Collection')
+    // eslint-disable-next-line
+    const [data, setData] = useState([])
+    const navigate = useNavigate()
     return (
         <div>
             <BannerGlobal
@@ -123,7 +133,8 @@ const ProductPage = () => {
 
                         {Data.map((item, index) => {
                             return (
-                                <Product
+                                <CardProductHome
+                                    onClickDetail={() => DetailArticle(item)}
                                     key={index}
                                     picture={item.picture}
                                     subTitle={item.subTitle}
