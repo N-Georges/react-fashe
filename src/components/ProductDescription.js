@@ -10,6 +10,7 @@ import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutl
 // eslint-disable-next-line
 import Data from '../Data'
 import { grey } from '@mui/material/colors';
+import { useParams } from 'react-router-dom';
 const colorNav = grey[600]
 
 const sizes = [
@@ -54,6 +55,7 @@ const ProductDescription = ({ picture, subTitle, price, tag, description, onBuyA
   const [size, setSize] = useState('small');
   const [color, setColor] = useState('red');
   const [count, setCount] = useState(1)
+ 
   
 
   const handleChangeSize = (event) => {
@@ -146,7 +148,7 @@ const ProductDescription = ({ picture, subTitle, price, tag, description, onBuyA
               <Button
                 variant="contained"
                 sx={{ width: '60px', px: 7, ml:2 }}
-                onClick={(e) => onBuyArticle(e)}
+                onClick={ onBuyArticle }
               >
                 <AddShoppingCartOutlinedIcon/>
               </Button>

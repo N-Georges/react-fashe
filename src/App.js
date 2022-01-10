@@ -23,7 +23,7 @@ function App() {
           <Route path='/contact' element={<ContactPage data={Data}/>}/>
           <Route path='/like' element={<LikePage data={Data}/>}/>
           <Route path='/panier' element={<PanierPage data={Data}/>}/>
-          <Route path='/product/:id' element={<ProductDetailPage data={Data} />}/>
+          <Route path='/product/:id' element={<ProductDetailPage data={Data}/>}/>
         </Routes>
         <Footer/>
       </BrowserRouter>

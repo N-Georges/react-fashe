@@ -7,17 +7,21 @@ import AddIcon from '@mui/icons-material/Add';
 
 
 const CardProductHome = ({picture, subTitle, price, tag, onClickDetail}) => {
-    console.log(onClickDetail);
     const [likeCard, setLikeCard] = useState('none')
     const [btnCard, setBtnCard] = useState('none')
     const [tagCard, setTagCard] = useState('none')
 // eslint-disable-next-line
     const navigate = useNavigate()
 
-    const showLikeCardHover = () => {
+    const showCardHover = () => {
         setLikeCard()
         setBtnCard()
         setTagCard()
+    }
+    const hiddenCardHover = () => {
+        setLikeCard('none')
+        setBtnCard('none')
+        setTagCard('none')
     }
     return (
         <>  
@@ -32,8 +36,8 @@ const CardProductHome = ({picture, subTitle, price, tag, onClickDetail}) => {
                     className='card1 cards'
                     sx={{ width: 238, height: 248, boxShadow: 3, cursor:'pointer', position:'relative' }}
                     style={{backgroundImage: `url(${picture})`}}
-                    onMouseEnter={() => showLikeCardHover()}
-                    // onMouseOver={()=> hiddenLikeCardHover()}
+                    onMouseEnter={() => showCardHover()}
+                    onMouseLeave={()=> hiddenCardHover()}
                     // onClick={() => navigate(`/product/${subTitle}`)}
                 >
                     {/* <Box className='btn-card-product'> */}
@@ -43,7 +47,7 @@ const CardProductHome = ({picture, subTitle, price, tag, onClickDetail}) => {
                             <FavoriteBorderOutlinedIcon  />
                     </IconButton>
                     <Box className='btn-card-product' sx={{position:'absolute', bottom:'10px', left:'50%', transform: 'translateX(-50%)'}}>
-                        <Button onClick={(e) => onClickDetail(e)} sx={{display:btnCard, opacity:'0.8', px:5}} variant="contained"><AddIcon/></Button>
+                        <Button onClick={onClickDetail} sx={{display:btnCard, opacity:'0.8', px:5}} variant="contained"><AddIcon/></Button>
                     </Box>
                 </Card>
                 <div className='cardProductHome-content'>

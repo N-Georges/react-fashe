@@ -7,7 +7,7 @@ import CardProductHome from './CardProductHome';
 const preventDefault = (event) => event.preventDefault();
 
 
-const ProductCardHome = ({handleOnClick, e}) => {
+const ProductCardHome = ({ handleOnClick }) => {
     return (
         <div >
             <div className='productHome'>
@@ -21,10 +21,10 @@ const ProductCardHome = ({handleOnClick, e}) => {
                     }}
                     onClick={preventDefault}
                     >
-                    <button value='bestSeller' onClick={(e) => handleOnClick(e)}>BestSeller</button>
-                    <button value='new' onClick={ handleOnClick}>New</button>
-                    <button value='sale' onClick={ handleOnClick}>Sale</button>
-                    <button value='old' onClick={ handleOnClick}>Old</button>
+                    <button value='bestSeller' onClick={ handleOnClick }>BestSeller</button>
+                    <button value='new' onClick={ handleOnClick }>New</button>
+                    <button value='sale' onClick={ handleOnClick }>Sale</button>
+                    <button value='old' onClick={ handleOnClick }>Old</button>
                     
                 </Box>
 

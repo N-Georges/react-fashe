@@ -21,7 +21,6 @@ const ProductPage = () => {
     const DetailArticle =(e) => {
         navigate(`/product/${e.subTitle}`)
     }
-    console.log(DetailArticle);
     // eslint-disable-next-line
     const [namePage, setNamePage] = useState('Product')
     // eslint-disable-next-line

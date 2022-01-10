@@ -4,3 +4,13 @@
         margin-bottom: 0;
     }
 }
+
+.card1{
+    Button IconButton{
+        display: none;
+    }
+    &hover{
+        display: flex;
+    }
+
+}
